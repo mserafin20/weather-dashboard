@@ -8,7 +8,7 @@
     <title>Weather Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-        <link rel="styleshee" href="./assets/css/style.css">
+    <link rel="styleshee" href="./assets/css/style.css">
 </head>
 
 <body>
@@ -23,22 +23,71 @@
             <aside class="col-12, col-md-3">
                 <section id="search-section">
                     <h2>Search for your city here!</h2>
-                    <input class="col-8"
-                    type="text",
-                    placeholder="Philadelphia",
-                    name="city-name",
-                    id="city-search"/>
+                    <input class="col-8" type="text" , placeholder="Philadelphia" , name="city-name" ,
+                        id="city-search" />
                     <button type="button" class="col-12 col-md-8 button" id="search">Search</button>
                     <button type="button" class="col-12 col-md-8 button" id="clear-history">Clear History</button>
 
                 </section>
             </aside>
+            <main class="col-12, col-md-9" id="weather-data">
+                <div class="container" id="current-data">
+                    <section class="row" id="name-city-date">
+                        <h3 class="col-12 col-md-4" id="current-city">Philadelphia</h3>
+                        <p class="col-12 col-md-4 col-lg-4" id="current-date">(MM D,YYYY)</p>
+                    </section>
+                    <section id="current-city-data">
+                        <p>Temp: <span id="current-temperature">0</span>F</p>
+                        <p>Wind: <span id="current-wind">0</span>MPH</p>
+                        <p>Humidity: <span id="current-humidity">0</span>%</p>
+                    </section>
+                </div>
+
+                <section class="container">
+                    <section class="row row-col-1 row-col-sm-1 row-col-md-2" style="justify-content: space-between;">
+                        <h4 style="margin-top: 5px;">This is the 5 day forecast: </h4>
+                        <section class="col-12 col-md-5 col-lg-2 days">
+                            <p id="first-day">(MM D, YYYY)</p>
+                            <p>Temp: <span id="first-day-temperature">0</span>F</p>
+                            <p>Wind: <span id="first-day-wind">0</span>MPH</p>
+                            <p>Humidity: <span id="first-day-humidity">0</span>%</p>
+                        </section>
+                        <section class="col-12 col-md-5 col-lg-2 days">
+                            <p id="first-day">(MM D, YYYY)</p>
+                            <p>Temp: <span id="second-day-temperature">0</span>F</p>
+                            <p>Wind: <span id="second-day-wind">0</span>MPH</p>
+                            <p>Humidity: <span id="second-day-humidity">0</span>%</p>
+                        </section>
+                        <section class="col-12 col-md-5 col-lg-2 days">
+                            <p id="first-day">(MM D, YYYY)</p>
+                            <p>Temp: <span id="third-day-temperature">0</span>F</p>
+                            <p>Wind: <span id="third-day-wind">0</span>MPH</p>
+                            <p>Humidity: <span id="third-day-humidity">0</span>%</p>
+                        </section>
+                        <section class="col-12 col-md-5 col-lg-2 days">
+                            <p id="first-day">(MM D, YYYY)</p>
+                            <p>Temp: <span id="fourth-day-temperature">0</span>F</p>
+                            <p>Wind: <span id="fourth-day-wind">0</span>MPH</p>
+                            <p>Humidity: <span id="fourth-day-humidity">0</span>%</p>
+                        </section>
+                        <section class="col-12 col-md-5 col-lg-2 days">
+                            <p id="first-day">(MM D, YYYY)</p>
+                            <p>Temp: <span id="fifth-day-temperature">0</span>F</p>
+                            <p>Wind: <span id="fifth-day-wind">0</span>MPH</p>
+                            <p>Humidity: <span id="fifth-day-humidity">0</span>%</p>
+                        </section>
+                    </section>
+                </section>
+            </main>
         </div>
     </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
-        <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 </html>
