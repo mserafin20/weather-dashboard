@@ -2,6 +2,34 @@
 //Variable List
 var searchBtn = document.querySelector('#search');
 var clearBtn = document.querySelector('#clear-history');
+var currentCity = document.querySelector('#current-city');
+var citySearch = document.querySelector('#city-search');
+var searchData = document.querySelector('#search-data');
+
+var currentTemp = document.querySelector("#current-temperature");
+var currentWind = document.querySelector("#current-wind");
+var currentHumidity = document.querySelector("#current-humidity");
+
+var firstDayTemp = document.querySelector('#first-day-temperature');
+var firstDayWind = document.querySelector('#first-day-wind');
+var firstDayHumidity = document.querySelector('#first-day-humidity');
+
+var secondDayTemp = document.querySelector('#second-day-temperature');
+var secondDayWind = document.querySelector('#second-day-wind');
+var secondDayHumidity = document.querySelector('#second-day-humidity');
+
+var thirdDayTemp = document.querySelector('#third-day-temperature');
+var thirdDayWind = document.querySelector('#third-day-wind');
+var thirdDayHumidity = document.querySelector('#third-day-humidity');
+
+var fourthDayTemp = document.querySelector('#fourth-day-temperature');
+var fourthDayWind = document.querySelector('#fourth-day-wind');
+var fourthDayHumidity = document.querySelector('#fourth-day-humidity');
+
+var fifthDayTemp = document.querySelector('#fifth-day-temperature');
+var fifthDayWind = document.querySelector('#fifth-day-wind');
+var fifthDayHumidity = document.querySelector('#fifth-day-humidity');
+
 
 //Utilizing dayjs to display the date on the page
 var currentDate = dayjs();
