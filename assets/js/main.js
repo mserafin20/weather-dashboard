@@ -1,5 +1,7 @@
 // API Key: a61eec67c6450e095a71a7fe664a1688
 //Variable List
+var searchBtn = document.querySelector('#search');
+var clearBtn = document.querySelector('#clear-history');
 
 //Utilizing dayjs to display the date on the page
 var currentDate = dayjs();
