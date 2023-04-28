@@ -80,7 +80,7 @@ function searchHistoryBtn() {
     console.log(this.textContent);
     var cityName = (this.textContent);
     // Fetch information from openweather api. 
-    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid={a61eec67c6450e095a71a7fe664a1688}`)
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid={76963712f356f6490540c0d68f19050d}`)
         .then(function (response) {
             console.log(response);
             return response.json();
@@ -120,7 +120,7 @@ function searchHistoryBtn() {
         })
 };
 // Fetching data about the default city, "Philadelphia"
-fetch(`https://api.openweathermap.org/data/2.5/forecast?q=philadelphia&appid={a61eec67c6450e095a71a7fe664a1688}`)
+fetch(`https://api.openweathermap.org/data/2.5/forecast?q=philadelphia&appid={76963712f356f6490540c0d68f19050d}`)
 
     .then(function (answer) {
         return answer.json();
@@ -158,7 +158,7 @@ function getWeather() {
     var nameCity = citySearch.value;
     console.log(nameCity)
     console.log(citySearch.value);
-    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid={a61eec67c6450e095a71a7fe664a1688}`)
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid={76963712f356f6490540c0d68f19050d}`)
         .then(function (response) {
             return response.json();
         })
