@@ -54,7 +54,7 @@ $('#fifth-day').text(fifthDay.format("MM D, YYYY"));
 // Fetching information from weather api
 
 // Clear button function
-clearData.addEventListener("click", function() {
+clearBtn.addEventListener("click", function() {
     localStorage.clear();
     location.reload();
 });
@@ -73,6 +73,61 @@ function init() {
             listEl.addEventListener("click", searchHistoryBtn);
         }
     }
-}
+};
+
+//Where the user's search history is displayed, they can click on a city previously searched and get that data.
+function searchHistoryBtn() {
+    console.log(this.textContent);
+    var cityName = (this.textContent);
+    // Fetch information from openweather api. 
+    fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid={a61eec67c6450e095a71a7fe664a1688}`)
+    .then(function (response) {
+        console.log(response);
+        return response.json();
+    });
+    .then(function (data) {
+        console.log(data);
+        //Updates info about the current day
+        currentCity.textContent = cityName
+        currentTemp.textContent = `${data.list[0].main.temp}`;
+        currentWind.textContent = `${data.list[0].wind.speed}`;
+        currentHumidity.textContent = `${data.list[0].main.humidity}`;
+        // Five day forecast
+        firstDayTemp.textContent = `${data.list[6].main.temp}`;
+        firstDayWind.textContent = `${data.list[6].wind.speed}`;
+        firstDayHumidity.textContent = `${data.list[6].main.humidity}`;
+
+        secondDayTemp.textContent = `${data.list[14].main.temp}`;
+        secondDayWind.textContent = `${data.list[14].wind.speed}`;
+        secondDayHumidity.textContent = `${data.list[14].main.humidity}`;
+
+        thirdDayTemp.textContent = `${data.list[22].main.temp}`;
+        thirdDayWind.textContent = `${data.list[22].wind.speed}`;
+        thirdDayHumidity.textContent = `${data.list[22].main.humidity}`;
+
+        fourthDayTemp.textContent = `${data.list[30].main.temp}`;
+        fourthDayWind.textContent = `${data.list[30].wind.speed}`;
+        fourthDayHumidity.textContent = `${data.list[30].main.humidity}`;
+
+        fifthDayTemp.textContent = `${data.list[38].main.temp}`;
+        fifthDayWind.textContent = `${data.list[38].wind.speed}`;
+        fifthDayHumidity.textContent = `${data.list[38].main.humidity}`;
+
+
+
+
+
+    })
+};
+// Fetching data about the default city, "Philadelphia"
+fetch(`https://api.openweathermap.org/data/2.5/forecast?q=philadelphia&appid={a61eec67c6450e095a71a7fe664a1688}`)
+
+.then(function (answer) {
+    return answer.json();
+})
+
+ 
+
+
 
 init();
