@@ -1,11 +1,74 @@
 body {
-    margin: 10px;
+    margin: 2%;
 }
 
 header {
-    margin-top: 10px;
+    margin-top: 1%;
+    background-image: linear-gradient(to left, #071393, #8c8ad7);
     display: flex;
     justify-content: center;
     align-items: center;
     color: azure;
+}
+
+
+h1 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.7em;
+    font-weight:bold;
+    padding-top: 0.5em;
+} 
+
+
+.days {
+    background-color:rgb(35, 49, 64);
+    color: aliceblue;
+    margin-top: 3em;
+}
+
+#search-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 25vh;
+}
+
+.button {
+    background-color: rgb(114, 175, 226);
+    color: aliceblue;
+    border-style: hidden;
+}
+
+#search-data {
+    padding-top: 20%;
+}
+
+#past-city {
+    background-color: rgb(9, 133, 235);
+    color: aliceblue;
+    border-style: hidden;
+}
+
+#city-name-date {
+    font-size: 1.7em;
+    align-items: center;
+}
+
+#current-data {
+    margin-top: 1.5em;
+    border: solid 1px black;
+}
+
+#today-icon {
+    width: 13%;
+}
+
+@media screen and (max-width = 768px) {
+    .days {
+        margin-top: 3em;
+    }
 }
